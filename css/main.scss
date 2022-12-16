@@ -1,0 +1,138 @@
+html{
+    overflow: auto;
+}
+
+body {
+    overflow: hidden; 
+	user-select: none;
+}
+
+.player {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 7vw;
+    text-align: center;
+    line-height: 8vw;
+    font-size: 3vw;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+    box-sizing:content-box;
+}
+
+#offence1 {
+    border: 10px solid rgb(255, 255, 110);
+}
+
+.player:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.offence {
+    background-color: rgb(255, 109, 109);
+}
+
+.defence {
+    background-color: rgb(97, 97, 255);
+}
+
+.court_line {
+    background-color: rgba(179, 140, 62, 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .three_point {
+        position: absolute;
+        width: 80vw;
+        height: 50vw;
+        left: 10vw;
+        bottom: 0;
+        border-top-left-radius: 40vw 35vw;
+        border-top-right-radius: 40vw 35vw;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border: 15px solid white;
+        border-bottom: 0;
+    }
+
+    .inside {
+        position: absolute;
+        width: 30vw;
+        height: 32vw;
+        border: 15px solid white;
+        border-bottom: 0;
+        left: 35vw;
+        bottom: 0;
+    }
+
+    .circle {
+        position: absolute;
+        width: 23vw;
+        height: 11.5vw;
+        border: 15px solid white;
+        border-radius: 50% / 100% 100% 0 0;
+        border-bottom: 0;    
+        left: 38.5vw;
+        bottom: 32vw;
+    }
+
+    .goal {
+        position: absolute;
+        width: 4vw;
+        height: 4vw;
+        border-radius: 2vw;
+        left: 48vw;
+        bottom: 5vw;
+        border: 15px solid white;
+    }
+
+    .bar1 {
+        position: absolute;
+        width: 2vw;
+        height: 2vw;
+        bottom: 2vw;
+        left: 49.5vw;
+        bottom: 3.5vw;
+        border-left: 15px solid white;
+    }
+
+    .bar2 {
+        position: absolute;
+        width: 15vw;
+        height: 2vw;
+        left: 42.5vw;
+        bottom: 3vw;
+        border-bottom: 15px solid white;
+    }
+}
+
+#offence1 {
+    left: 46vw;
+    top: 2.5vw;
+}
+
+#offence2 {
+    left: 6vw;
+    top: 24vw;
+}
+
+#offence3 {
+    right: 6vw;
+    top: 24vw;
+}
+
+#offence4 {
+    left: 52vw;
+    top: 23vw;
+}
+
+#offence5 {
+    left: 40vw;
+    top: 48vw;
+}
+
