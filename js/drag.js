@@ -16,6 +16,37 @@ height = window.innerHeight
 
 goal_position = [width*0.5, height-width*0.05]
 
+$('#transform').click(function() {
+    var elem = document.getElementById("style"); 
+    // console.log(elem)
+    // console.log(elem.href) --> http://127.0.0.1:5501/css/main.css が返る
+    str = elem.href.split('css/') 
+    if (str[1] == "main.css") {
+        elem.href = "css/transformed.css";
+        goal_position = [width*0.5, width*0.05]
+        console.log(goal_position)
+    } else {
+        elem.href = "css/main.css"
+        goal_position = [width*0.5, height-width*0.05]
+        console.log(goal_position)
+    }
+    console.log('change!')
+})
+
+function ofInput() {
+    var of_color = $('#of-color').val()
+    $('.offence').css('background-color', of_color)
+}
+
+function dfInput() {
+    var df_color = $('#df-color').val()
+    $('.defence').css('background-color', df_color)
+}
+
+function courtInput() {
+    var court_color = $('#court-color').val()
+    $('.court_line').css('background-color', court_color)
+}
 
 console.log($('#offence1').offset().top)
 
@@ -84,6 +115,8 @@ function getDefencePosition(offence_position) {
         markman_position = offence_position[index]
         if(index == baller_index) {
             defence_position = getCenter(markman_position, offence_position[baller_index], goal_position, 5,1,1)
+            console.log("-------------")
+            console.log(goal_position)
         } else {
             defence_position = getCenter(markman_position, offence_position[baller_index], goal_position, 3,2,2)
             // defence_position = getIsosceles(markman_position, offence_position[baller_index])
@@ -115,20 +148,3 @@ function unko(){
         baller_index = baller_id - 1
     })
 }
-
-// $(function() {
-//     unko()
-// })
-
-
-        // cover_list = []
-        // offence_position.forEach(function(elem, index) {
-        //     cover_list.push(getDistance(markman_position, elem))
-        // })
-        // var index_list=[0,1,2,3,4];
-        // function bcmp(v1, v2) {
-        //     return cover_list[v1] - cover_list[v2];
-        // }
-        // index_list.sort(bcmp);
-        // cover_offence_index = index_list[1]
-        // cover_offence_position = offence_position[cover_offence_index]

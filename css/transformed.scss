@@ -6,6 +6,7 @@ html{
 body {
     overflow: hidden; 
 	user-select: none;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .menu {
@@ -27,6 +28,28 @@ body {
                 'opsz' 48
         }
     }
+    .color {
+        display: block;
+        position: absolute;
+        width: 9vw;
+        height: 2vw;
+        line-height: 2vw;
+        right: 2vw;
+        text-align: right;
+        z-index: 1;
+    }
+    .of-color {
+        top: 8vw;
+    }
+    .df-color {
+        top: 11vw;
+    }
+    .court-color {
+        top: 14vw;
+    }
+    input {
+        z-index: 3;
+    }
 }
 .button:hover {
     z-index: 3;  
@@ -41,7 +64,6 @@ body {
     text-align: center;
     line-height: 8vw;
     font-size: 3vw;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
     color: white;
     box-sizing:content-box;
