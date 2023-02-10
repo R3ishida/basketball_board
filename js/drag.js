@@ -25,6 +25,8 @@ function move(){
     draw()
 
     $('.player').draggable({
+        containment: '.court-box',
+        scroll: false,
     })
     
     $('.player').on('dblclick', function() {
